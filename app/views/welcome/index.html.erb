@@ -1,0 +1,11 @@
+<h1>Hello,Rails</h1>
+<div id="calendar"></div>
+<%= link_to 'Go_to_articles', articles_path %>|
+<%= link_to 'Go_to_products', products_path %>|
+<%= link_to 'Go_to_schools', schools_path %>|
+<%= link_to 'Go_to_Meetings', meetings_path %>|
+<% if user_signed_in? %>
+<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+<% else %>
+	<%= link_to 'Sign in', new_user_session_path %>
+<% end %>
